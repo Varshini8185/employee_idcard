@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee ID Card</title>
+</head>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-top: 20px;
+        background-color: rgb(115, 64, 64);
+    }
+    .id-card {
+        width: 200px;
+        height: 300px;
+        margin: 20px auto;
+        padding: 15px;
+        border: 2px solid #000000;
+        box-shadow: 5px 5px 10px;
+        background-color: rgb(203, 132, 203);
+        display: none; 
+    }
+    .id-card h2 {
+        margin-top: 0;
+        font-size: 20px;
+        color: #000000;
+    }
+    .id-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 10px 0;
+        border: 2px solid #020202;
+    }
+    .id-card .details {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .id-card .details p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #070707;
+    }
+    .input-container {
+        margin-top: 20px;
+    }
+    .input-container input {
+        margin: 5px 0;
+        padding: 5px;
+        width: 200px;
+        font-size: 14px;
+    }
+    
+</style>
+<body>
+
+    <div class="input-container">
+        
+        <button id="b1" onclick="showIdCard()">Show ID Card</button>
+    </div>
+
+    <div class="id-card" id="idcard">
+        <h2>EMPLOYEE ID CARD</h2>
+        <img id="photo" src="img1.webp" alt="profile">
+        <div class="details">
+            <p><b>Name: </b><span id="name"></span>Varshini</p>
+            <p><b>Blood Group: </b><span id="bloodgroup"></span>O+</p>
+            <p><b>ID: </b><span id="id"></span>211327</p>
+            <p><b>Position: </b><span id="position"></span>Software Developer</p>
+        </div>
+    </div>
+
+    <script>
+        let button=document.getElementById("b1");
+        button.addEventListener("click",function showIdCard() {
+            document.getElementById("name").innerHTML.value = name;
+            document.getElementById("bloodgroup").innerHTML.value = bloodgroup;
+            document.getElementById("id").innerHTML.value = id;
+            document.getElementById("position").innerHTML.value = position;
+            document.getElementById("idcard").style.display = "block";
+        });
+        
+    </script>
+
+</body>
+</html>
